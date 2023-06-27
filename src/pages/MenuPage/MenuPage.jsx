@@ -1,12 +1,11 @@
+import MealPackageItem from '../../components/MealPackageItem/MealPackageItem';
+import './MenuPage.css'
 
-import MealPackageItem from "../../components/MealPackageItem/MealPackageItem";
 
-
-export default function OrderHistoryPage() {
+export default function MenuPage() {
   return (
     <>
       <MealPackageItem />
-   
     </>
   );
 }

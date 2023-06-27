@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
-    name: {type: String, required: true},
-    phone: {type: Number, required: true},
+    name: {type: String},
+    phone: {type: Number},
     email: {
         type: String,
         trim: true,
-        required: true
+        
     },
-    address: {type: String, requuired: true},
-    eventType: {type: String, required: false},
-    numOfGuests: {type: Number, min: 40, max: 250, required: true},
-    date: {type: Date, required: true},
+    address: {type: String},
+    eventType: {type: String},
+    numOfGuests: {type: Number, min: 40, max: 250},
+    date: {type: Date},
     servingTime: {enum: [1-12], enum: ['AM', 'PM']},
-    mealPackage: {enum: ['The Classic Plate', 'Tijaunero Plate', 'Custom Plate', 'Veggie Plate'], required: true},
+    mealPackage: {enum: ['The Classic Plate', 'Tijaunero Plate', 'Custom Plate', 'Veggie Plate']},
   }, {
     timestamps: true
   }); 

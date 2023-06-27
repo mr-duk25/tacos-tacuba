@@ -1,0 +1,8 @@
+.label {
+    font-size: 3vmin;
+    display: flex;
+    padding: 5px 290px;
+    background-color: rgb(247, 246, 237);
+    border:  solid black 2px;
+    border-radius: 10px;
+}
