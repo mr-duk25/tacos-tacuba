@@ -13,7 +13,8 @@ const eventSchema = new Schema({
     eventType: {type: String},
     numOfGuests: {type: Number, min: 40, max: 250},
     date: {type: Date},
-    servingTime: {enum: [1-12], enum: ['AM', 'PM']},
+    servingTime: {type: Number, enum: [1-12]},
+    servingTimeAMPM: {type: Number, enum: ['AM', 'PM']},
     mealPackage: {enum: ['The Classic Plate', 'Tijaunero Plate', 'Custom Plate', 'Veggie Plate']},
   }, {
     timestamps: true

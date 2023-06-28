@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import error from '../../components/LoginForm/LoginForm';
+import { useNavigate } from 'react-router-dom';
 import * as eventsAPI from '../../utilities/events-api';
-import NewEventRequest from '../NewEventRequest/NewEventRequest';
+
 
 export default function NewEvent({}) {
+  const navigate = useNavigate()
     const [event, setEvent] = useState({
     
       name: '',
@@ -14,12 +15,14 @@ export default function NewEvent({}) {
       numOfGuests: '',
       date: '',
       servingTime: '',
+      servingTimeAMPM: '',
       mealPackage: ''
     });
     
     async function handleSubmit(evt) {
       evt.preventDefault()
       const newEvent = await eventsAPI.create(event)
+      navigate(`/events/${newEvent._id}/details`)
       console.log(newEvent)
      }
         
@@ -65,7 +68,7 @@ export default function NewEvent({}) {
                 <option value={11}>11</option>
                 <option value={12}>12</option>
             </select>
-            <select name="servingTime" value={event.servingTime} onChange={handleChange} required >
+            <select name="servingTimeAMPM" value={event.servingTimeAMPM} onChange={handleChange} required >
                 <option value={'AM'}>AM</option>
                 <option value={'PM'}>PM</option>
             </select>
@@ -81,11 +84,8 @@ export default function NewEvent({}) {
           <button type="submit">Submit Event Request</button>
         </form>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
-    <div>
-      <NewEventRequest />
-    </div>
+
         </>
     )
 }

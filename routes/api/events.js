@@ -6,6 +6,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 router.post('/', eventsCtrl.create);
 
+router.get('/:id', eventsCtrl.show);
 
 
 module.exports = router;

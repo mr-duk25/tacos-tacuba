@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import BookEventPage from '../BookEventPage/BookEventPage';
 import MenuPage from '../MenuPage/MenuPage';
 import NavBar from '../../components/NavBar/NavBar';
+import { EventDetailsPage } from '../EventDetailPage/EventDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -19,6 +20,7 @@ export default function App() {
               {/* Route components in here */}
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/events" element={<BookEventPage />} />
+              <Route path="/events/:id/details" element={<EventDetailsPage />} />
              
             </Routes>
           </>
