@@ -7,6 +7,7 @@ import BookEventPage from '../BookEventPage/BookEventPage';
 import MenuPage from '../MenuPage/MenuPage';
 import NavBar from '../../components/NavBar/NavBar';
 import { EventDetailsPage } from '../EventDetailPage/EventDetailPage';
+import EditFormPage  from '../EditFormPage/EditFormPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -21,6 +22,7 @@ export default function App() {
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/events" element={<BookEventPage />} />
               <Route path="/events/:id/details" element={<EventDetailsPage />} />
+              <Route path="/events/:id/update" element={<EditFormPage />} />
              
             </Routes>
           </>

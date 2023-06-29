@@ -1,8 +1,13 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { findDetails } from '../../utilities/events-api';
 import { useParams } from 'react-router-dom';
-// import handleChange from '../../components/EventForm/EventForm'
 import handleSubmit from '../../components/EventForm/EventForm'
+import handleChange from '../../components/EventForm/EventForm'
+import navigate from '../../components/EventForm/EventForm'
+import * as eventsAPI from '../../utilities/events-api';
+import EditForm from '../../components/EditForm/EditForm';
+
 
 
 
@@ -10,19 +15,19 @@ import handleSubmit from '../../components/EventForm/EventForm'
 
 export function EventDetailsPage() {
     const {id} = useParams()
-    const [event, setEvent] = useState({
+    const [event, setEvent] = useState({})
 
-    })
+    // async function handleEdit(evt) {
+    //   evt.preventDefault()
+    //   const editEvent = await eventsAPI.edit(event)
+    //   navigate(`/events/${editEvent._id}/update`)
+    //  }
 
-    async function handleUpdate(evt) {
-      evt.preventDefault()
-      alert('clicked')
-     }
+
 
   
      useEffect (function () {
         async function getDetails() {
-            console.log('yooo')
             const details = await findDetails(id)
             setEvent(details)
             console.log(details)
@@ -63,11 +68,14 @@ export function EventDetailsPage() {
           <select  required>
             <option>{event.mealPackage}</option>
             </select>
-          <button onClick={handleUpdate}>Update Event Request</button>
+          <Link to ={`/events/${event._id}/update`}><button >Edit Event Request</button></Link>
           <button type="submit">Delete Request</button>
         </form>
       </div>
-  
+  <hr />
+  <div>
+    
+  </div>
         </>
 
     )
