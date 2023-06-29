@@ -31,16 +31,14 @@ async function show(req, res) {
 async function edit(req, res) {
     try {
         const editEvent = await Event.findById(req.params.id);
-        console.log(editEvent)
         res.json(editEvent)
     } catch (err) {
         res.status(400).json(err)
-        console.log(err)
     }
 }
 async function update(req, res) {
     try {
-        const updatedEvent = await Event.findById(req.params.id);
+        const updatedEvent = await Event.findByIdAndUpdate(req.params.id, req.body.event);
         console.log(updatedEvent)
         res.json(updatedEvent)
     } catch (err) {

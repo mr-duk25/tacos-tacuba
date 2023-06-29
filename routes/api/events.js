@@ -10,6 +10,6 @@ router.get('/:id', eventsCtrl.show);
 
 router.get('/:id/edit', eventsCtrl.edit);
 
-router.get('/:id', eventsCtrl.update);
+router.put('/:id', eventsCtrl.update);
 
 module.exports = router;

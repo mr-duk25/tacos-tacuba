@@ -17,7 +17,7 @@ const   BASE_URL = '/api/events';
       console.log(id)
       return sendRequest(`${BASE_URL}/${id}`, 'GET');
     }
-    
-    export async function update(id) {
-      return sendRequest(`${BASE_URL}/${id}`, 'PUT');
+
+    export async function update(id, event) {
+      return sendRequest(`${BASE_URL}/${id}`, 'PUT', {event});
     }
