@@ -6,9 +6,6 @@ const   BASE_URL = '/api/events';
       return sendRequest(BASE_URL, 'POST', {event});
     }
     
-    
-    
-    
     export async function findDetails(id) {
       return sendRequest(`${BASE_URL}/${id}`, 'GET');
     }
@@ -21,3 +18,10 @@ const   BASE_URL = '/api/events';
     export async function update(id, event) {
       return sendRequest(`${BASE_URL}/${id}`, 'PUT', {event});
     }
+    
+    export async function deleteEvent(id) {
+      return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+    }
+    
+    
+    

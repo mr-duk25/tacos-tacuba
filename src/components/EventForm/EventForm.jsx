@@ -14,14 +14,15 @@ export default function NewEvent({}) {
       eventType: '',
       numOfGuests: '',
       date: '',
-      servingTime: '',
-      servingTimeAMPM: '',
-      mealPackage: ''
+      servingTime: '5',
+      servingTimeAMPM: 'PM',
+      mealPackage: 'The Classic Plate'
     });
     
     async function handleSubmit(evt) {
       evt.preventDefault()
       const newEvent = await eventsAPI.create(event)
+      console.log(newEvent)
       navigate(`/events/${newEvent._id}/details`)
       console.log(newEvent)
      }
@@ -69,17 +70,17 @@ export default function NewEvent({}) {
                 <option value={12}>12</option>
             </select>
             <select name="servingTimeAMPM" value={event.servingTimeAMPM} onChange={handleChange} required >
-                <option value={'AM'}>AM</option>
-                <option value={'PM'}>PM</option>
+                <option value='AM'>AM</option>
+                <option value='PM'>PM</option>
             </select>
 
           </div>
           <label>Meal Package</label>
-          <select type="enum" name="mealPackage" value={event.mealPackage} onChange={handleChange} required>
-            <option value={'The Classic Plate'}>The Classic Plate</option>
-            <option value={'The Tijaunero Plate'}>The Tijaunero Plate</option>
-            <option value={'The Veggie Plate'}>The Veggie Plate</option>
-            <option value={'The Custom Plate'}>The Custom Plate</option>
+          <select type="text" name="mealPackage" value={event.mealPackage} onChange={handleChange} required>
+            <option value='The Classic Plate'>The Classic Plate</option>
+            <option value='The Tijaunero Plate'>The Tijaunero Plate</option>
+            <option value='The Veggie Plate'>The Veggie Plate</option>
+            <option value='The Custom Plate'>The Custom Plate</option>
             </select>
           <button type="submit">Submit Event Request</button>
         </form>

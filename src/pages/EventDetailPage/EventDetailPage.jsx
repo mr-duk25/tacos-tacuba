@@ -3,10 +3,9 @@ import { useState, useEffect } from 'react';
 import { findDetails } from '../../utilities/events-api';
 import { useParams } from 'react-router-dom';
 import handleSubmit from '../../components/EventForm/EventForm'
-import handleChange from '../../components/EventForm/EventForm'
-import navigate from '../../components/EventForm/EventForm'
-import * as eventsAPI from '../../utilities/events-api';
-import EditForm from '../../components/EditForm/EditForm';
+import * as eventsAPI from '../../utilities/events-api'
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -15,13 +14,14 @@ import EditForm from '../../components/EditForm/EditForm';
 
 export function EventDetailsPage() {
     const {id} = useParams()
+    const navigate = useNavigate();
     const [event, setEvent] = useState({})
 
-    // async function handleEdit(evt) {
-    //   evt.preventDefault()
-    //   const editEvent = await eventsAPI.edit(event)
-    //   navigate(`/events/${editEvent._id}/update`)
-    //  }
+    async function handleDelete(evt) {
+      evt.preventDefault()
+       await eventsAPI.deleteEvent(event)
+      navigate(`/events`)
+     }
 
 
 
@@ -33,7 +33,7 @@ export function EventDetailsPage() {
             console.log(details)
         } 
         getDetails();
-     }, [])
+     }, [id])
     return (
         <>
         <h1>Details Page</h1>
@@ -69,7 +69,7 @@ export function EventDetailsPage() {
             <option>{event.mealPackage}</option>
             </select>
           <Link to ={`/events/${event._id}/update`}><button >Edit Event Request</button></Link>
-          <button type="submit">Delete Request</button>
+          <button onClick={handleDelete}>Delete Request</button>
         </form>
       </div>
   <hr />
