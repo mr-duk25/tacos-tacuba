@@ -1,8 +1,74 @@
-.label {
-    font-size: 3vmin;
-    display: flex;
-    padding: 5px 290px;
-    background-color: rgb(247, 246, 237);
+
+main {
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+}
+
+h1 {
+    font-family: 'Akronim', cursive;
+    font-size: 15vmin;
+}
+
+
+h3 {
+    font-family: 'Trade Winds', cursive;
+    font-size: 5vmin;
+    text-align:center;
+    background-color:antiquewhite;
     border:  solid black 2px;
     border-radius: 10px;
+    width: 100vmin;
+    display:flex;
+    justify-content: center; 
+    
 }
+
+p {
+    font-family: 'Rock Salt', cursive;
+    font-size: large;
+    margin-top: 5vmin;
+    
+    
+}
+
+.price {
+    font-family: 'Rock Salt', cursive;
+    font-size: large;
+    justify-content:center;
+    color: antiquewhite;
+    background-color: black;
+    border-radius: 10px;
+    width: 35vmin;
+}
+
+.sides {
+    font-family: 'Trade Winds', cursive;
+    font-size: large;
+    text-align:center;
+    color:antiquewhite;
+    background-color: black;
+    border: solid whitesmoke 2px;
+    border-radius: 10px;
+    width: 150vmin;
+    margin-top: 20vmin;
+}
+
+img {
+    background-color: black;
+    border: solid whitesmoke 2px;
+    border-radius: 10px;
+    max-height: 263px;
+    max-width: 263px; 
+    display: flex;
+    
+}
+
+button {
+    background-color: var(--green);
+    border: solid black 2px;
+}
+
+
+
