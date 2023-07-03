@@ -1,12 +1,43 @@
 
-img {
-    margin: 10vmin;
-    width: 50vmin;
+.title {
+   margin-bottom: 15px;
+    width: 110px;
+    margin-left: 100px;
+    margin-right: -100px;
+    border-color: rgb(7, 7, 7);
 }
 
-h1 {
+.logo-text {
     font-family: 'Akronim', cursive;
-    font-size: 15vmin;
-    margin: -30vmin;
-    margin-bottom: 20vmin;
+    font-size: 12vmin;
+    color: rgb(252, 250, 248);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 12vmin;
+    width: 100vmin;
+    padding-top: 50px;
 }
+
+.logo-div {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ttFWoNvaF05yEnV9ZJeKGIILz4YvZMcxt_VjuBbMibjaFyPgmu_EMzZlT5ZQgVma5Dc&usqp=CAU");
+    height: 20vmin;
+    width: 100vmin;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-top: 80px;
+    border: 5px solid rgb(2, 0, 0);
+    margin-top: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    }
+

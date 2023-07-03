@@ -13,12 +13,13 @@ h3 {
     font-family: 'Trade Winds', cursive;
     font-size: 5vmin;
     text-align:center;
-    background-color:antiquewhite;
+    background-color:rgb(252, 250, 250);
     border:  solid black 2px;
     border-radius: 10px;
     width: 100vmin;
     display:flex;
     justify-content: center; 
+    margin-top: 200px;
     
 }
 
@@ -26,7 +27,8 @@ p {
     font-family: 'Rock Salt', cursive;
     font-size: large;
     margin-top: 5vmin;
-    
+    display: flex;
+    align-items: center;
     
 }
 

@@ -8,17 +8,22 @@ import MenuPage from '../MenuPage/MenuPage';
 import NavBar from '../../components/NavBar/NavBar';
 import { EventDetailsPage } from '../EventDetailPage/EventDetailPage';
 import EditFormPage  from '../EditFormPage/EditFormPage';
+import   HomePage   from '../HomePage/HomePage'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
+ 
+           
     <main className="App">
+      
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* Route components in here */}
+              <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/events" element={<BookEventPage />} />
               <Route path="/events/:id/details" element={<EventDetailsPage />} />
@@ -29,6 +34,8 @@ export default function App() {
           :
           <AuthPage setUser={setUser} />
       }
+      
     </main>
+           
   );
 }
