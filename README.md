@@ -2,7 +2,9 @@
 
 Welcome to the Taco Cart Catering Web Application! This project is designed to streamline the catering process for a taco cart business, making it easier for customers to submit their catering requests and for the business owners to manage and fulfill those requests.
 
-Features
+**Screen Shots**
+<img width="1440" src="https://user-images.githubusercontent.com/129014618/250672492-18b94af4-e95c-4a32-9fd9-86b0516ca52c.png">
+**Features**
 **Short Menu:** The web application features a concise yet mouthwatering menu that showcases the delicious taco options available for catering events. Customers can quickly browse through the menu items, enticing them with the flavors of authentic Mexican cuisine.
 
 **Catering Request Form:** We understand the importance of personalized service, which is why the web application includes a user-friendly form for customers to submit their catering requests. The form allows customers to specify event details, select menu items, and provide any additional preferences or dietary requirements.
