@@ -14,8 +14,8 @@ Welcome to the Taco Cart Catering Web Application! This project is designed to s
 **Order Management:** Once a catering request is submitted, the application provides an intuitive interface for the business owners to manage and track orders. They can review and respond to each request, ensuring seamless communication and efficient coordination with their customers.
 
 **Technologies Used**
-Front-end: The web application is built using HTML, CSS, and JavaScript, providing an interactive and visually appealing user interface.
+Front-end: The web application is built using HTML, CSS, JavaScript and React providing an interactive and visually appealing user interface.
 
-**Back-end:** To handle the form submissions and data management, the application utilizes Express, a server-side scripting language. 
+**Back-end:** To handle the form submissions and data management, the application utilizes Express and Node, server-side scripting languages. 
 
 Database: The catering requests and order data are stored in a database, ensuring data persistence and efficient retrieval. A relational database management system called MongoDB is used to securely store and manage the information.
