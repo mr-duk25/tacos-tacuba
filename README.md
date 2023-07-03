@@ -4,6 +4,8 @@ Welcome to the Taco Cart Catering Web Application! This project is designed to s
 
 **Screen Shots**
 <img width="1440" src="https://user-images.githubusercontent.com/129014618/250672492-18b94af4-e95c-4a32-9fd9-86b0516ca52c.png">
+<img width="1440" src="https://user-images.githubusercontent.com/129014618/250672508-4a029d3a-23f2-47f6-83e7-4dabc06141ba.png">
+<img width="1440" src="https://user-images.githubusercontent.com/129014618/250672520-9239b495-7741-4c14-a510-62cfe4788661.png">
 **Features**
 **Short Menu:** The web application features a concise yet mouthwatering menu that showcases the delicious taco options available for catering events. Customers can quickly browse through the menu items, enticing them with the flavors of authentic Mexican cuisine.
 
