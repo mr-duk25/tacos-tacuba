@@ -8,15 +8,20 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
+    <div>
     <nav>
       <Link to="/menu">Menu Page</Link>
       &nbsp; | &nbsp;
       <Link to="/events">Book Event</Link>
-      &nbsp;&nbsp;
+      &nbsp; | &nbsp;
       <Link to="/">Home</Link>
-      &nbsp;&nbsp;
+      &nbsp; | &nbsp;
+   
       <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;  &nbsp;
+      &nbsp;  &nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;  &nbsp;
     </nav>
+    </div>
   );
 }

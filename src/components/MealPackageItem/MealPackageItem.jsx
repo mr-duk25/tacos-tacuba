@@ -4,7 +4,7 @@ export default function MealPackageItem () {
         <>
         <main>
             
-                    <h1>Tacos Tacuba</h1>
+                    
                     <h3>The Classic Plate</h3>
                 <p class="price">$11 per person</p>
             <div>
